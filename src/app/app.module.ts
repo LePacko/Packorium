@@ -9,6 +9,10 @@ import { AppComponent }   from './app.component';
 import { CheckboxModule } from 'primeng/checkbox';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {InputMaskModule} from 'primeng/inputmask';
+
+
 
 
 
@@ -19,6 +23,8 @@ import {RadioButtonModule} from 'primeng/radiobutton';
     CheckboxModule,
     SelectButtonModule,
     RadioButtonModule,
+    InputTextareaModule,
+    InputMaskModule,
     FormsModule
   ],
   declarations: [ AppComponent ],

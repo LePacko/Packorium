@@ -1,48 +1,144 @@
-<h5>taille</h5>
+<form name="contact" method="POST" data-netlify="true">
+
+
+<h3>Taille</h3>
 <div class="radioDiv" >
-  <img src="../../assets/téléchargé.png" (click)="selectedSize='XS'">
-  <p-radioButton name="taille" value="XS" label="XS" [(ngModel)]="selectedSize "></p-radioButton >
+  <!-- <img src="../../assets/téléchargé.png" (click)="selectedSize='XS'"> -->
+  <p-radioButton name="taille" value="XS" label="XS10*10" [(ngModel)]="selectedSize "></p-radioButton >
 </div>
 <div class="radioDiv">
-  <img src="../../assets/téléchargé.png" (click)="selectedSize='S'">
-<p-radioButton  name="taille" value="S" label="S" [(ngModel)]="selectedSize "></p-radioButton >
+  <!-- <img src="../../assets/téléchargé.png" (click)="selectedSize='S'"> -->
+  <p-radioButton  name="taille" value="S" label="S 15*15" [(ngModel)]="selectedSize "></p-radioButton >
 </div>
 
-  <div class="radioDiv">
-    <img src="../../assets/téléchargé.png" (click)="selectedSize='M'">
-<p-radioButton  name="taille" value="M" label="M" [(ngModel)]="selectedSize "></p-radioButton >
+<div class="radioDiv">
+  <!-- <img src="../../assets/téléchargé.png" (click)="selectedSize='M'"> -->
+  <p-radioButton  name="taille" value="M" label="M 20*20" [(ngModel)]="selectedSize "></p-radioButton >
 </div>
 
-  <div class="radioDiv">
-    <img src="../../assets/téléchargé.png" (click)="selectedSize='L'">
-<p-radioButton  name="taille" value="L" label="L" [(ngModel)]="selectedSize "></p-radioButton >
+<div class="radioDiv">
+  <!-- <img src="../../assets/téléchargé.png" (click)="selectedSize='L'"> -->
+  <p-radioButton  name="taille" value="L" label="L 30*30" [(ngModel)]="selectedSize "></p-radioButton >
+</div>
+<div class="radioDiv">
+  <!-- <img src="../../assets/téléchargé.png" (click)="selectedSize='XL'"> -->
+  <p-radioButton  name="taille" value="XL" label="XL 40*40" [(ngModel)]="selectedSize "></p-radioButton >
 </div>
 
-  <div class="radioDiv">
-    <img src="../../assets/téléchargé.png" (click)="selectedSize='XL'">
-<p-radioButton  name="taille" value="XL" label="XL" [(ngModel)]="selectedSize "></p-radioButton >
-</div>
+<div class="divider div-transparent div-dot"></div>
 
-<div *ngIf="selectedSize ==='XS'">
+<div >
   <div>
-    <h5>nombre de plante</h5>
+    <h3>Nombre de plante</h3>
     <div class="radioDiv" (click)="selectedPlantNumber=1">
-      <img src="../../assets/téléchargé.png">
-      <p-radioButton  style="margin-left: 0px" name="size" value="1" label="1" [(ngModel)]="selectedPlantNumber "></p-radioButton >
+      <img src="../../assets/1 plante.jpg">
+      <p-radioButton   name="size" value="1" label="1" [(ngModel)]="selectedPlantNumber "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="selectedPlantNumber=2" *ngIf="selectedSize ==='S' || selectedSize ==='M' || selectedSize ==='L' || selectedSize ==='XL' ">
+      <img src="../../assets/2plante.jpg">
+      <p-radioButton   name="size" value="2" label="2" [(ngModel)]="selectedPlantNumber "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="selectedPlantNumber=3"  *ngIf="selectedSize ==='M' || selectedSize ==='L' || selectedSize ==='XL'">
+      <img src="../../assets/3plante.jpg">
+      <p-radioButton   name="size" value="3" label="3" [(ngModel)]="selectedPlantNumber "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="selectedPlantNumber=4"  *ngIf="selectedSize ==='L' || selectedSize ==='XL'" >
+      <img src="../../assets/4plante.jpg">
+      <p-radioButton   name="size" value="4" label="4" [(ngModel)]="selectedPlantNumber "></p-radioButton >
     </div>
   </div>
+
+  <div class="divider div-transparent div-dot"></div>
+
   <div>
-    <h5>figurine</h5>
+    <h3>Type de pot</h3>
+    <div class="radioDiv" (click)="selectedPotType='ampoule'">
+      <img src="../../assets/ampoule.jpeg">
+      <p-radioButton   name="size" value="ampoule" label="Ampoule" [(ngModel)]="selectedPotType "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="selectedPotType='oeuf'" *ngIf="selectedSize ==='S' || selectedSize ==='M' ">
+      <img src="../../assets/oeuf.jpg">
+      <p-radioButton   name="size" value="oeuf" label="Oeuf" [(ngModel)]="selectedPotType "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="selectedPotType='Bocaux'">
+      <img src="../../assets/bocaux.jpg">
+      <p-radioButton   name="size" value="Bocaux" label="Bocal" [(ngModel)]="selectedPotType "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="selectedPotType='Bocal liege'">
+      <img src="../../assets/bocalliege.jpg">
+      <p-radioButton   name="size" value="Bocal liege" label="Bocal liege" [(ngModel)]="selectedPotType "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="selectedPotType='layton'" *ngIf="selectedSize ==='S' || selectedSize ==='M' || selectedSize ==='L' ">
+      <img src="../../assets/layton.jpg">
+      <p-radioButton   name="size" value="layton" label="Layton" [(ngModel)]="selectedPotType "></p-radioButton >
+    </div>
+  </div>
+
+  <div class="divider div-transparent div-dot"></div>
+
+
+  <div>
+    <h3>Type de plante</h3>
+    <p>(plusieur choix possible)</p>
+    <div class="radioDiv" >
+      <img src="../../assets/succulente.jpg" >
+      <p-checkbox   name="plante type" value="succulentes" label="Succulentes" [(ngModel)]="selectedPlantType"></p-checkbox >
+    </div>
+    <div class="radioDiv">
+      <img src="../../assets/cactus.jpg">
+      <p-checkbox  name="plante type" value="cactus" label="Cactus" [(ngModel)]="selectedPlantType"></p-checkbox >
+    </div>
+    <div class="radioDiv">
+      <img src="../../assets/tropical.jpg">
+      <p-checkbox   name="plante type" value="tropical" label="Tropical" [(ngModel)]="selectedPlantType"></p-checkbox >
+    </div>
+    <div class="radioDiv" *ngIf="selectedSize ==='S' || selectedSize ==='M' || selectedSize ==='L' || selectedSize ==='XL'">
+      <img src="../../assets/ficus.webp">
+      <p-checkbox   name="plante type" value="Ficus" label="Ficus" [(ngModel)]="selectedPlantType"></p-checkbox >
+    </div>
+  </div>
+
+  <div class="divider div-transparent div-dot"></div>
+
+  <div>
+    <h3>figurine</h3>
     <div class="radioDiv" (click)="boolFigurine='non'">
-      <img src="../../assets/téléchargé.png">
-      <p-radioButton  style="margin-left: 0px" name="figurine" value="non" label="non" [(ngModel)]="boolFigurine "></p-radioButton >
+      <img src="../../assets/ampoule.jpeg">
+      <p-radioButton   name="figurine" value="non" label="Non" [(ngModel)]="boolFigurine "></p-radioButton >
     </div>
     <div class="radioDiv" (click)="boolFigurine='oui'">
-      <img src="../../assets/téléchargé.png">
-      <p-radioButton  style="margin-left: 0px" name="figurine" value="oui" label="oui" [(ngModel)]="boolFigurine "></p-radioButton >
+      <img src="../../assets/figurine.jpg">
+      <p-radioButton  name="figurine" value="oui" label="Oui" [(ngModel)]="boolFigurine "></p-radioButton >
     </div>
   </div>
+
+  <div class="divider div-transparent div-dot"></div>
+
+  <div>
+    <h3>environnement</h3>
+    <div class="radioDiv" (click)="selectedEnvironnement='vert'">
+      <img src="../../assets/2plante.jpg">
+      <p-radioButton   name="figurine" value="vert" label="Vert" [(ngModel)]="selectedEnvironnement "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="selectedEnvironnement='sable'">
+      <img src="../../assets/sable.jpg">
+      <p-radioButton  name="figurine" value="sable" label="Sable" [(ngModel)]="selectedEnvironnement "></p-radioButton >
+    </div>
+  </div>
+
+  <div class="divider div-transparent div-dot"></div>
+
+  <h3>Dis moi ce qui te plairais</h3>
+  <textarea [rows]="5" [cols]="100" pInputTextarea [autoResize]="autoResize" [(ngModel)]="textAvis"></textarea>
+
 </div>
+<div>
+  <h3>ton mail</h3>
+  <p-inputMask [(ngModel)]="mail" mask="XXXX@gmail.com"></p-inputMask>
+</div>
+
+
+</form>
 
 
 
@@ -56,7 +152,7 @@
   <div class="logo">
     <img src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1646339469/angular_wzrs5o.png">
   </div>
-</div><h5>Multiple Selection</h5>
+</div><h3>Multiple Selection</h3>
 <p-selectButton [options]="paymentOptions" [(ngModel)]="value2" multiple="multiple" optionLabel="name"
 	optionValue="value"></p-selectButton>
 <div class="resource-list">
