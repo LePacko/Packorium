@@ -1,4 +1,3 @@
-<form name="contact" method="POST" data-netlify="true">
 
 <h3>Taille</h3>
 <div class="radioDiv" >
@@ -135,10 +134,10 @@
   <h3>ton mail</h3>
   <p-inputMask [(ngModel)]="mail" mask="XXXX@gmail.com"></p-inputMask>
 </div>
-
-<button type="submit">Send</button>
-
+<form [formGroup]="feedbackForm" name="feedbackForm" (ngSubmit)="onSubmit()">
+  <button type="submit" >Submit Feedback</button>
 </form>
+
 
 
 

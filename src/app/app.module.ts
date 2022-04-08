@@ -1,6 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,8 +25,12 @@ import {InputMaskModule} from 'primeng/inputmask';
     RadioButtonModule,
     InputTextareaModule,
     InputMaskModule,
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
+  providers: [],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
