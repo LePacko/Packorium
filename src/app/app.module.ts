@@ -20,6 +20,10 @@ import { SuccessComponent } from './success/success.component';
 
 
 @NgModule({
+  declarations: [
+    AppComponent,
+    SuccessComponent,
+  ],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -35,7 +39,6 @@ import { SuccessComponent } from './success/success.component';
 
   ],
   providers: [],
-  declarations: [ AppComponent, SuccessComponent ],
   bootstrap:    [ AppComponent ]
 })
 
