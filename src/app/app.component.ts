@@ -30,7 +30,7 @@ export class AppComponent {
   public autoResize: boolean = true;
 
   selectedSize: string='M';
-  selectedPlantNumber: number=0;
+  selectedPlantNumber: string='0';
   boolFigurine: string='';
   selectedPlantType: string[]=[];
   selectedEnvironnement: string='';
@@ -47,7 +47,9 @@ export class AppComponent {
       selectedEnvironnement: [this.selectedEnvironnement ],
       selectedPotType: [this.selectedPotType ],
       textAvis: [this.textAvis ],
-      mail:  [this.mail, Validators.email]
+      mail:  [this.mail, Validators.email],
+      rating: [0, Validators.min(1)]
+
     });
     console.log(this.feedbackForm.value)
     this.netlifyForms.submitFeedback(this.feedbackForm.value).subscribe(
