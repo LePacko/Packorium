@@ -132,7 +132,7 @@
 </div>
 <div>
   <h3>ton mail</h3>
-  <p-inputMask [(ngModel)]="mail" mask="XXXX@gmail.com"></p-inputMask>
+    <input type="text" id="inputtext" pInputText [(ngModel)]="mail"> 
 </div>
 <form [formGroup]="feedbackForm" name="feedbackForm" (ngSubmit)="onSubmit()">
   <button type="submit" >Submit Feedback</button>
