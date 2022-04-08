@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
-import { Feedback } from '../form_terrarium/feedback';
+import { Feedback } from '../feedback';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
