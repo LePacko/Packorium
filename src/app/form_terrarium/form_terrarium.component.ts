@@ -36,11 +36,15 @@ export class FormTerrariumComponent{
   mail:string='';
 
   onSubmit() {
+    let value="";
+    for(let i of this.selectedPlantType){
+      value+=i+" ";
+    }
     this.feedbackForm = this.fb.group({
       selectedSize: [this.selectedSize],
       selectedPlantNumber: [this.selectedPlantNumber ],
       boolFigurine: [this.boolFigurine],
-      selectedPlantType: [this.selectedPlantType ],
+      selectedPlantType: [value ],
       selectedEnvironnement: [this.selectedEnvironnement ],
       selectedPotType: [this.selectedPotType ],
       textAvis: [this.textAvis ],
