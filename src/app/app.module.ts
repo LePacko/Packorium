@@ -14,6 +14,7 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputMaskModule} from 'primeng/inputmask';
 import { SuccessComponent } from './success/success.component';
+import { FormTerrariumComponent } from './form_terrarium/form_terrarium.component';
 
 
 
@@ -23,6 +24,7 @@ import { SuccessComponent } from './success/success.component';
   declarations: [
     AppComponent,
     SuccessComponent,
+    FormTerrariumComponent,
   ],
   imports: [
     AppRoutingModule,
