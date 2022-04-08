@@ -47,8 +47,8 @@ export class AppComponent {
       selectedEnvironnement: [this.selectedEnvironnement ],
       selectedPotType: [this.selectedPotType ],
       textAvis: [this.textAvis ],
-      mail:  [this.mail, Validators.email],
-      rating: [0, Validators.min(1)]
+      mail:  [this.mail],
+      rating: [0]
 
     });
     console.log(this.feedbackForm.value)
