@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
+import {RadioButtonModule} from 'primeng/radiobutton';
+
+
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls:['./app-style.scss'],
 })
 export class AppComponent {
-  title = 'angular-quickstart';
+  selectedSize: string='';
+  selectedPlantNumber: number=0;
+  boolFigurine: string='';
+  
+
 }

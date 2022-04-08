@@ -1,8 +1,64 @@
-<div class="header">
+<h5>taille</h5>
+<div class="radioDiv" >
+  <img src="../../assets/téléchargé.png" (click)="selectedSize='XS'">
+  <p-radioButton name="taille" value="XS" label="XS" [(ngModel)]="selectedSize "></p-radioButton >
+</div>
+<div class="radioDiv">
+  <img src="../../assets/téléchargé.png" (click)="selectedSize='S'">
+<p-radioButton  name="taille" value="S" label="S" [(ngModel)]="selectedSize "></p-radioButton >
+</div>
+
+  <div class="radioDiv">
+    <img src="../../assets/téléchargé.png" (click)="selectedSize='M'">
+<p-radioButton  name="taille" value="M" label="M" [(ngModel)]="selectedSize "></p-radioButton >
+</div>
+
+  <div class="radioDiv">
+    <img src="../../assets/téléchargé.png" (click)="selectedSize='L'">
+<p-radioButton  name="taille" value="L" label="L" [(ngModel)]="selectedSize "></p-radioButton >
+</div>
+
+  <div class="radioDiv">
+    <img src="../../assets/téléchargé.png" (click)="selectedSize='XL'">
+<p-radioButton  name="taille" value="XL" label="XL" [(ngModel)]="selectedSize "></p-radioButton >
+</div>
+
+<div *ngIf="selectedSize ==='XS'">
+  <div>
+    <h5>nombre de plante</h5>
+    <div class="radioDiv" (click)="selectedPlantNumber=1">
+      <img src="../../assets/téléchargé.png">
+      <p-radioButton  style="margin-left: 0px" name="size" value="1" label="1" [(ngModel)]="selectedPlantNumber "></p-radioButton >
+    </div>
+  </div>
+  <div>
+    <h5>figurine</h5>
+    <div class="radioDiv" (click)="boolFigurine='non'">
+      <img src="../../assets/téléchargé.png">
+      <p-radioButton  style="margin-left: 0px" name="figurine" value="non" label="non" [(ngModel)]="boolFigurine "></p-radioButton >
+    </div>
+    <div class="radioDiv" (click)="boolFigurine='oui'">
+      <img src="../../assets/téléchargé.png">
+      <p-radioButton  style="margin-left: 0px" name="figurine" value="oui" label="oui" [(ngModel)]="boolFigurine "></p-radioButton >
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="header">
   <div class="logo">
     <img src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1646339469/angular_wzrs5o.png">
   </div>
-</div>
+</div><h5>Multiple Selection</h5>
+<p-selectButton [options]="paymentOptions" [(ngModel)]="value2" multiple="multiple" optionLabel="name"
+	optionValue="value"></p-selectButton>
 <div class="resource-list">
   <h2>
       Here are some resources to help you on your Angular + Netlify journey:
@@ -23,4 +79,4 @@
 </div>
 <footer class="footer">
   Made with <a href="https://netlify.com"><img src="https://res.cloudinary.com/dzkoxrsdj/image/upload/v1646714899/netliheart_ezlkim.svg" alt="Netlify Logo" /></a> for you!
-</footer>
+</footer> -->
