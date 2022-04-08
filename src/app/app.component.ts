@@ -5,6 +5,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputMaskModule} from 'primeng/inputmask';
 import { NetlifyFormsService } from './netlify-forms/netlify-forms.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 
 
@@ -24,6 +26,7 @@ export class AppComponent {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router,
     private netlifyForms: NetlifyFormsService,
   ) { }
 
@@ -55,7 +58,7 @@ export class AppComponent {
     this.netlifyForms.submitFeedback(this.feedbackForm.value).subscribe(
       () => {
         this.feedbackForm.reset();
-        //this.router.navigateByUrl('/success');
+        this.router.navigateByUrl('/success');
       },
       err => {
         this.errorMsg = err;
