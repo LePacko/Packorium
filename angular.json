@@ -101,6 +101,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/angular-quickstart",
+            "netlifyToken": "5ZAG4kOJ-N1MG9DJb_aYSJ_zxFXcVTQZqOgTkpb2Was",
+            "siteId": "891c7386-324f-457f-bd0e-41c19ed59d5c"
+          }
         }
       }
     }

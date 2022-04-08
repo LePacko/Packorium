@@ -40,15 +40,16 @@ export class AppComponent {
 
   onSubmit() {
     this.feedbackForm = this.fb.group({
-      selectedSize: [this.selectedSize, Validators.required],
-      selectedPlantNumber: [this.selectedPlantNumber, Validators.required],
-      boolFigurine: [this.boolFigurine,  Validators.required],
-      selectedPlantType: [this.selectedPlantType, Validators.required],
-      selectedEnvironnement: [this.selectedEnvironnement, Validators.required],
-      selectedPotType: [this.selectedPotType, Validators.required],
-      textAvis: [this.textAvis, Validators.required],
-      mail:  [this.mail, [Validators.email, Validators.required]]
+      selectedSize: [this.selectedSize],
+      selectedPlantNumber: [this.selectedPlantNumber ],
+      boolFigurine: [this.boolFigurine],
+      selectedPlantType: [this.selectedPlantType ],
+      selectedEnvironnement: [this.selectedEnvironnement ],
+      selectedPotType: [this.selectedPotType ],
+      textAvis: [this.textAvis ],
+      mail:  [this.mail, Validators.email]
     });
+    console.log(this.feedbackForm.value)
     this.netlifyForms.submitFeedback(this.feedbackForm.value).subscribe(
       () => {
         this.feedbackForm.reset();
