@@ -58,7 +58,7 @@ export class FormTerrariumComponent implements OnInit{
 
 
     });
-    this.router.navigate(['/success',this.price]);
+    //this.router.navigate(['/success',this.price]);
 
     this.priceEstimate();    
     console.log(this.feedbackForm.value)
