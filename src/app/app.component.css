@@ -1,3 +1,8 @@
 ::ng-deep .p-tabmenu-nav {
+    background: floralwhite;
+    
     justify-content: center;
+}
+::ng-deep .p-tabmenu-nav.p-reset {
+    background: floralwhite;
 }

@@ -58,6 +58,8 @@ export class FormTerrariumComponent implements OnInit{
 
 
     });
+    this.router.navigate(['/success',this.price]);
+
     this.priceEstimate();    
     console.log(this.feedbackForm.value)
     this.netlifyForms.submitFeedback(this.feedbackForm.value).subscribe(
