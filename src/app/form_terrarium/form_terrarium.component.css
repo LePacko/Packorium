@@ -1,6 +1,9 @@
 ::ng-deep {
 
 }
+:host ::ng-deep button {
+	margin: 20px ;
+}
 
 img{
   max-width: 300px;
@@ -53,7 +56,14 @@ img{
 
 
 
-
+#mainPage{
+	margin-top: 20px;
+	display: inline-block;
+	align-self: center;
+    background-color: white;
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 
 
 

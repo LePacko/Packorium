@@ -15,6 +15,15 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {InputMaskModule} from 'primeng/inputmask';
 import { SuccessComponent } from './success/success.component';
 import { FormTerrariumComponent } from './form_terrarium/form_terrarium.component';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
+import {InputTextModule} from 'primeng/inputtext';
+import {TabMenuModule} from 'primeng/tabmenu';
+import { MessageModule } from 'primeng/message';
+import { HomeComponent } from './home/home.component';
+import { GalerieComponent } from './galerie/galerie.component';
+
+
 
 
 
@@ -25,6 +34,8 @@ import { FormTerrariumComponent } from './form_terrarium/form_terrarium.componen
     AppComponent,
     SuccessComponent,
     FormTerrariumComponent,
+    HomeComponent,
+    GalerieComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -37,7 +48,12 @@ import { FormTerrariumComponent } from './form_terrarium/form_terrarium.componen
     InputMaskModule,
     FormsModule, 
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule,
+    InputTextModule,
+    TabMenuModule,
+    MessageModule,
+    RippleModule
 
   ],
   providers: [],
