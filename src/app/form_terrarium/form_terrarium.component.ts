@@ -74,8 +74,13 @@ export class FormTerrariumComponent implements OnInit{
   }
   priceEstimate(){
     this.price=0
-    if(this.selectedSize==='XS'|| this.selectedSize==='S'){
+    if(this.selectedSize==='XS' ){
       this.price+=15;
+
+    }
+    else if( this.selectedSize==='S'){
+      this.price+=20;
+
     }
     else if(this.selectedSize==='M'|| this.selectedSize=== 'L'){
       this.price+=25;
