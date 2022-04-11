@@ -22,6 +22,8 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import { MessageModule } from 'primeng/message';
 import { HomeComponent } from './home/home.component';
 import { GalerieComponent } from './galerie/galerie.component';
+import {TimelineModule} from 'primeng/timeline';
+import { CardModule } from "primeng/card";
 
 
 
@@ -53,7 +55,9 @@ import { GalerieComponent } from './galerie/galerie.component';
     InputTextModule,
     TabMenuModule,
     MessageModule,
-    RippleModule
+    RippleModule,
+    TimelineModule,
+    CardModule
 
   ],
   providers: [],

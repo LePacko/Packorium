@@ -1,4 +1,38 @@
-<p>En construction</p>
+<div class="grid grid-nogutter surface-section text-800 mainPanel">
+    <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center panelColor ">
+        <section>
+            <span class="block text-6xl font-bold mb-1">Un terrarium rien que pour toi</span>
+            <div class="text-6xl text-primary font-bold mb-3">Et sur mesure</div>
+            <p class="mt-0 mb-4 text-700 line-height-3">Le but de se site est de te donnée une estimation du coup de la création du terrarium que tu souhaite. Sache que je le prix ne représente que le cout des materiaux necessaire à la création rien de plus.</p>
+            
+            <button pButton pRipple label="Je souhaite un terrarium" type="button" class="mr-3 p-button-raised" (click)="redirectForm(1)"></button>
+            <button pButton pRipple label="Galerie" type="button" class="p-button-outlined" (click)="redirectForm(2)"></button>
+        </section>
+    </div>
+    <div class="col-12 md:col-6 overflow-hidden panelColor">
+        <img src="../../assets/figurine.jpg" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%); max-width: 50%;">
+    </div>
+</div>
 
-<button pButton pRipple type="button" label="Si tu souhaites un terrarium clique ici" class="p-button-rounded" (click)="redirectForm()"></button>
+
+<div class="card">
+	<h5>Processus de création</h5>
+	<p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
+		<ng-template pTemplate="marker" let-event>
+			<span class="custom-marker p-shadow-2" [style.backgroundColor]="event.color">
+                <i [ngClass]="event.icon"></i>
+            </span>
+		</ng-template>
+		<ng-template pTemplate="content" let-event>
+			<p-card [header]="event.status" >
+				<p *ngIf="event.status==='Commande'">Tu crée ton souhaite dans l'onglet contact, en le validant bien à la fin pour que je puisse le recevoir.</p>
+                <p *ngIf="event.status==='Analyse'">Je regarde ta demande pour l'adapter à tes choix et les idées supplementaire que tu aura rajouter dans le champs texte dedié</p>
+                <p *ngIf="event.status==='Discussion'">On échange sur le sujet pour que l'on soit d'accord sur le prix et le style de ton terrarium</p>
+                <p *ngIf="event.status==='Création'">Je crée ton terrarium</p>
+                <p *ngIf="event.status==='Envoie'">Tu récupere ton précieux.</p>
+			</p-card>
+		</ng-template>
+	</p-timeline>
+</div>
+
 
