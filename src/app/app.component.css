@@ -11,7 +11,8 @@
 .footer-basic {
     border-radius: 10px;
     margin-top: 30px;
-    padding:40px 0;
+    padding:10px ;
+    padding-bottom:25px ;
     background-color:floralwhite;
     color:#4b4c4d;
   }
@@ -41,7 +42,6 @@
   
   .footer-basic .social {
     text-align:center;
-    padding-bottom:25px;
   }
   
   .footer-basic .social > a {
