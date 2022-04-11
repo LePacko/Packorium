@@ -10,12 +10,16 @@ import {PrimeIcons} from 'primeng/api';
 export class HomeComponent implements OnInit {
 
   events1: any[] = [];
+  mobile: boolean = false;
 
 
   constructor(    private router: Router
     ) { }
 
   ngOnInit(): void {
+    if (window.screen.width === 425) { // 768px portrait
+      this.mobile = true;
+    }
     this.events1 = [
       {
         status: "Commande",
