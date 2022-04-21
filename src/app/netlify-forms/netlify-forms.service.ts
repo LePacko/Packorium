@@ -26,7 +26,10 @@ export class NetlifyFormsService {
       '/',
       entry.toString(),
       {
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded',
+        'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload'
+
+ },
         responseType: 'text'
       }
     ).pipe(catchError(this.handleError));
