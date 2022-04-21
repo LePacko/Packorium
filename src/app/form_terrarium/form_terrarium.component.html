@@ -67,7 +67,7 @@
     </div>
     <div class="radioDiv" (click)="selectedPotType='Bocal liege' ; priceEstimate() ">
       <img src="../../assets/bocalliege.jpg">
-      <p-radioButton (click)="priceEstimate()" name="size" value="Bocal liege" label="Bocal liege" [(ngModel)]="selectedPotType "></p-radioButton >
+      <p-radioButton (click)="priceEstimate()" name="size" value="Bocal liege" label="Bocal liège" [(ngModel)]="selectedPotType "></p-radioButton >
     </div>
     <div class="radioDiv" (click)="selectedPotType='layton'; priceEstimate()" *ngIf="selectedSize ==='S' || selectedSize ==='M' || selectedSize ==='L' ">
       <img src="../../assets/layton.jpg">
@@ -80,7 +80,7 @@
 
   <div>
     <h3>Type de plantes</h3>
-    <p>(plusieur choix possibles)</p>
+    <p>(plusieurs choix possibles)</p>
     <div class="radioDiv" >
       <img src="../../assets/succulente.jpg" >
       <p-checkbox  (click)="priceEstimate()" name="plante type" value="succulentes" label="Succulentes" [(ngModel)]="selectedPlantType"></p-checkbox >
@@ -91,7 +91,7 @@
     </div>
     <div class="radioDiv">
       <img src="../../assets/tropical.jpg">
-      <p-checkbox  (click)="priceEstimate()" name="plante type" value="tropical" label="Tropical" [(ngModel)]="selectedPlantType"></p-checkbox >
+      <p-checkbox  (click)="priceEstimate()" name="plante type" value="tropical" label="Tropicales" [(ngModel)]="selectedPlantType"></p-checkbox >
     </div>
     <div class="radioDiv" *ngIf="selectedSize ==='S' || selectedSize ==='M' || selectedSize ==='L' || selectedSize ==='XL'">
       <img src="../../assets/ficus.webp">
