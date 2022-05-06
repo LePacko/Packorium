@@ -25,7 +25,9 @@ import { GalerieComponent } from './galerie/galerie.component';
 import {TimelineModule} from 'primeng/timeline';
 import { CardModule } from "primeng/card";
 
-
+import 'hammerjs';
+        import 'mousetrap';
+        import { GalleryModule } from '@ks89/angular-modal-gallery';
 
 
 
@@ -57,7 +59,8 @@ import { CardModule } from "primeng/card";
     MessageModule,
     RippleModule,
     TimelineModule,
-    CardModule
+    CardModule,
+    GalleryModule
 
   ],
   providers: [],
