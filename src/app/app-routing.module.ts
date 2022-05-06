@@ -9,7 +9,7 @@ import { GalerieComponent } from './galerie/galerie.component';
 
 
 const routes: Routes = [  
-{ path: '', redirectTo: '/form', pathMatch: 'full' },
+{ path: '', redirectTo: '/home', pathMatch: 'full' },
 { path:'home', component: HomeComponent  },
 { path:'form', component: FormTerrariumComponent  },
 { path:'photo', component: GalerieComponent  },
