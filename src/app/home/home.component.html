@@ -2,7 +2,7 @@
     <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center panelColor ">
         <section>
             <span class="block text-6xl font-bold mb-1">Un terrarium rien que pour toi</span>
-            <div class="text-6xl text-primary font-bold mb-3">Et sur mesure</div>
+            <div class="text-6xl text-primary font-bold mb-3">Et sur-mesure</div>
             <p class="mt-0 mb-4 text-700 line-height-3">Le but de ce site est d'estimer le coût de la création de ton terrarium. Sache que le prix ne représente que le coût des matériaux nécessaires à la création, rien de plus.</p>
             
             <button pButton pRipple label="Je souhaite un terrarium" type="button" class="mr-3 p-button-raised" (click)="redirectForm(1)"></button>
@@ -26,10 +26,10 @@
 		<ng-template pTemplate="content" let-event>
 			<p-card [header]="event.status" >
 				<p *ngIf="event.status==='Commande'">Tu crées ton terrarium dans l'onglet contact (n'oublie pas de valider à la fin pour que je puisse le recevoir).</p>
-                <p *ngIf="event.status==='Analyse'">Je traite ta demande pour concevoir le terrarium selon tes choix et les idées supplementaires que tu auras ajouter.</p>
+                <p *ngIf="event.status==='Analyse'">Je traite ta demande pour concevoir le terrarium selon tes choix et les idées supplémentaires que tu auras ajouté.</p>
                 <p *ngIf="event.status==='Discussion'">On échange sur le sujet pour s'accorder sur le style et le prix de ton terrarium.</p>
                 <p *ngIf="event.status==='Création'">Je fabrique ton terrarium.</p>
-                <p *ngIf="event.status==='Envoie'">Tu récupères ton précieux.</p>
+                <p *ngIf="event.status==='Envoi'">Tu récupères ton précieux.</p>
 			</p-card>
 		</ng-template>
 	</p-timeline>

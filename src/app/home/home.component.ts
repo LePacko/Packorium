@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
         color: "#673AB7"
       },
       {
-        status: "Envoie",
+        status: "Envoi",
         date: "16/10/2020 10:00",
         icon: PrimeIcons.CHECK,
         color: "#607D8B"
